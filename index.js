@@ -5,7 +5,7 @@ const morgan = require('morgan')
 morgan.token('recordName',  (req, res) => { return JSON.stringify(req.body) })
 app.use(express.json())
 app.use(express.static('dist'))
-ape.use(cors())
+app.use(cors())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms name :recordName'))
 let persons = [
     {
