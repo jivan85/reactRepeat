@@ -8,7 +8,7 @@ mongoose.connect(url)
     .then(result => { console.log('connected to MongoDB') }).catch(error => { console.log('error connecting to MongoDB:', error.message) })
 const userSchema = new mongoose.Schema({
     name: String,
-    number: Boolean,
+    number:String,
 })
 
 userSchema.set('toJSON', {
